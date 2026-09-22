@@ -10,12 +10,30 @@ export default function Home() {
           I enjoy solving complex technical problems with modern engineering practices. 
           Currently studying AI-powered workflows to enhance productivity and software quality.
         </p>
-        <div className="flex gap-4 mt-6">
+        <div className="flex flex-wrap gap-4 mt-6">
           <a href="mailto:abhipreetaman@gmail.com" className="text-sm flex items-center gap-1 group">
             <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Email
           </a>
           <a href="https://www.linkedin.com/in/abhi-aman" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
             <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> LinkedIn
+          </a>
+          <a href="https://x.com/AmanAbhipreet" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
+            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> X
+          </a>
+          <a href="https://www.youtube.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
+            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> YouTube
+          </a>
+          <a href="https://www.threads.com/@callmeabhipreet" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
+            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Threads
+          </a>
+          <a href="https://www.instagram.com/callmeabhipreet/" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
+            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Instagram
+          </a>
+          <a href="https://www.facebook.com/abhipreetaman/" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
+            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Facebook
+          </a>
+          <a href="https://medium.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
+            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Medium
           </a>
         </div>
       </header>
