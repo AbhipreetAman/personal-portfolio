@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaEnvelope, FaLinkedin, FaXTwitter, FaYoutube, FaThreads, FaInstagram, FaFacebook, FaMedium } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -10,30 +11,30 @@ export default function Home() {
           I enjoy solving complex technical problems with modern engineering practices. 
           Currently studying AI-powered workflows to enhance productivity and software quality.
         </p>
-        <div className="flex flex-wrap gap-4 mt-6">
-          <a href="mailto:abhipreetaman@gmail.com" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Email
+        <div className="flex flex-wrap gap-5 mt-6">
+          <a href="mailto:abhipreetaman@gmail.com" aria-label="Email" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaEnvelope size={20} />
           </a>
-          <a href="https://www.linkedin.com/in/abhi-aman" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> LinkedIn
+          <a href="https://www.linkedin.com/in/abhi-aman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaLinkedin size={20} />
           </a>
-          <a href="https://x.com/AmanAbhipreet" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> X
+          <a href="https://x.com/AmanAbhipreet" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaXTwitter size={20} />
           </a>
-          <a href="https://www.youtube.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> YouTube
+          <a href="https://www.youtube.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaYoutube size={20} />
           </a>
-          <a href="https://www.threads.com/@callmeabhipreet" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Threads
+          <a href="https://www.threads.com/@callmeabhipreet" target="_blank" rel="noopener noreferrer" aria-label="Threads" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaThreads size={20} />
           </a>
-          <a href="https://www.instagram.com/callmeabhipreet/" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Instagram
+          <a href="https://www.instagram.com/callmeabhipreet/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaInstagram size={20} />
           </a>
-          <a href="https://www.facebook.com/abhipreetaman/" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Facebook
+          <a href="https://www.facebook.com/abhipreetaman/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaFacebook size={20} />
           </a>
-          <a href="https://medium.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" className="text-sm flex items-center gap-1 group">
-            <span className="text-white group-hover:text-blue-500 transition-colors">↗</span> Medium
+          <a href="https://medium.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaMedium size={20} />
           </a>
         </div>
       </header>
