@@ -6,10 +6,25 @@ import NextStep from "@/components/NextStep";
 export default function Home() {
   return (
     <div className="prose fade-in">
-      <header className="mb-12 flex flex-col-reverse sm:flex-row sm:justify-between sm:items-start gap-8">
+      <header className="mb-12">
+        <div className="flex flex-row justify-between items-start gap-6 mb-6">
+          <div>
+            <h1 className="text-2xl font-semibold mb-1 text-white">Abhipreet Aman</h1>
+            <p className="text-[#a1a1aa] m-0">Software Engineer & Product Strategist</p>
+          </div>
+          <div className="shrink-0">
+            <Image 
+              src="/profile.jpg" 
+              alt="Abhipreet Aman" 
+              width={100} 
+              height={100} 
+              className="rounded-2xl object-cover shadow-lg m-0 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px]"
+              priority
+            />
+          </div>
+        </div>
+        
         <div>
-          <h1 className="text-2xl font-semibold mb-1 text-white">Abhipreet Aman</h1>
-          <p className="text-[#a1a1aa] mb-4">Software Engineer & Product Strategist</p>
           <p className="text-[#a1a1aa] mb-6 leading-relaxed max-w-lg">
             I enjoy solving complex technical problems with modern engineering practices. 
             Currently architecting enterprise-grade solutions at Boeing and studying AI-powered workflows.
@@ -43,17 +58,6 @@ export default function Home() {
               <FaReddit size={20} />
             </a>
           </div>
-        </div>
-        
-        <div className="shrink-0 mt-2 sm:mt-0">
-          <Image 
-            src="/profile.jpg" 
-            alt="Abhipreet Aman" 
-            width={120} 
-            height={120} 
-            className="rounded-2xl object-cover border border-[#333] shadow-lg m-0"
-            priority
-          />
         </div>
       </header>
 
