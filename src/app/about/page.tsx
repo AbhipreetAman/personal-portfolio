@@ -41,27 +41,14 @@ export default function About() {
         </div>
       </section>
 
-      <section className="mb-14 grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div>
-          <h2 className="text-lg font-semibold mb-4 text-white">Top Skills</h2>
-          <ul className="text-[#a1a1aa] text-sm space-y-2.5 m-0 list-none p-0">
-            <li><strong className="text-white font-medium">Software Engineering:</strong> Architecture, System Design, Scalability</li>
-            <li><strong className="text-white font-medium">Product & Strategy:</strong> Product Management, Roadmap Planning, Execution</li>
-            <li><strong className="text-white font-medium">AI & Workflows:</strong> AI Integration, Prompt Engineering, Automation</li>
-            <li><strong className="text-white font-medium">Problem Solving:</strong> First-Principles Thinking, Rapid Prototyping</li>
-          </ul>
-        </div>
-        
-        <div>
-          <h2 className="text-lg font-semibold mb-4 text-white">Languages</h2>
-          <ul className="text-[#a1a1aa] text-sm space-y-2.5 m-0 list-none p-0">
-            <li>English <span className="opacity-60 text-xs ml-1">(Full Professional)</span></li>
-            <li>Hindi <span className="opacity-60 text-xs ml-1">(Native)</span></li>
-            <li>Maithili <span className="opacity-60 text-xs ml-1">(Native)</span></li>
-            <li>French <span className="opacity-60 text-xs ml-1">(Elementary)</span></li>
-            <li>Sanskrit <span className="opacity-60 text-xs ml-1">(Elementary)</span></li>
-          </ul>
-        </div>
+      <section className="mb-14">
+        <h2 className="text-lg font-semibold mb-4 text-white">Top Skills</h2>
+        <ul className="text-[#a1a1aa] text-sm space-y-2.5 m-0 list-none p-0">
+          <li><strong className="text-white font-medium">Software Engineering:</strong> Architecture, System Design, Scalability</li>
+          <li><strong className="text-white font-medium">Product & Strategy:</strong> Product Management, Roadmap Planning, Execution</li>
+          <li><strong className="text-white font-medium">AI & Workflows:</strong> AI Integration, Prompt Engineering, Automation</li>
+          <li><strong className="text-white font-medium">Problem Solving:</strong> First-Principles Thinking, Rapid Prototyping</li>
+        </ul>
       </section>
 
       <section className="mb-10">
