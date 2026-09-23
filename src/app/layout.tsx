@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from 'geist/font/sans';
 import "./globals.css";
 import Navigation from "@/components/Navigation";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Abhipreet Aman",
@@ -17,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased selection:bg-[#333] selection:text-white`}>
+      <body className={`${GeistSans.className} antialiased selection:bg-[#333] selection:text-white`}>
         <div className="max-w-2xl mx-auto px-6 py-16 flex flex-col min-h-screen">
           <Navigation />
           <main className="flex-grow">

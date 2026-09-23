@@ -13,7 +13,7 @@ export default function Services() {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {services.map((service, i) => (
-          <div key={i} className="p-5 border border-[#333] rounded-lg bg-[#111] hover:bg-[#1a1a1a] transition-colors flex flex-col h-full">
+          <div key={i} className="p-6 bg-[#1a1a1a] rounded-2xl flex flex-col h-full">
             <h2 className="text-lg font-medium text-white mb-2 m-0">{service.title}</h2>
             <p className="text-[#a1a1aa] text-sm leading-relaxed mb-4 grow m-0">
               {service.description}
@@ -34,15 +34,15 @@ export default function Services() {
           Interested in working together or looking for mentorship? You can reach me via email or book a session directly on my consulting profiles.
         </p>
         <div className="not-prose flex flex-wrap gap-4">
-          <a href="mailto:abhipreetaman@gmail.com" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111] border border-[#333] text-white text-sm font-medium rounded-md hover:bg-[#1a1a1a] hover:border-[#555] transition-all no-underline group">
+          <a href="mailto:abhipreetaman@gmail.com" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1a1a] text-white text-sm font-medium rounded-md hover:bg-[#222] transition-all no-underline group">
             <FaEnvelope size={14} className="text-[#a1a1aa] group-hover:text-white transition-colors" />
             Email Me
           </a>
-          <a href="https://topmate.io/abhipreet_aman" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111] border border-[#333] text-white text-sm font-medium rounded-md hover:bg-[#1a1a1a] hover:border-[#555] transition-all no-underline group">
+          <a href="https://topmate.io/abhipreet_aman" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1a1a] text-white text-sm font-medium rounded-md hover:bg-[#222] transition-all no-underline group">
             <FaArrowUpRightFromSquare size={12} className="text-[#a1a1aa] group-hover:text-white transition-colors" />
             Book on Topmate
           </a>
-          <a href="https://www.urbuddy.in/mentors/aman" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111] border border-[#333] text-white text-sm font-medium rounded-md hover:bg-[#1a1a1a] hover:border-[#555] transition-all no-underline group">
+          <a href="https://www.urbuddy.in/mentors/aman" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1a1a1a] text-white text-sm font-medium rounded-md hover:bg-[#222] transition-all no-underline group">
             <FaArrowUpRightFromSquare size={12} className="text-[#a1a1aa] group-hover:text-white transition-colors" />
             urBuddy Profile
           </a>

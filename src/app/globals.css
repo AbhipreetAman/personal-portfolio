@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  --background: #111111;
+  --background: #0a0a0a;
   --foreground: #ededed;
   --text-secondary: #a1a1aa;
   --accent-color: #ffffff;
-  --link-hover: #3b82f6;
+  --link-hover: #ffffff;
 }
 
 @theme inline {
@@ -25,24 +25,47 @@ body {
   color: #ffffff;
 }
 
+/* Premium Typography Spacing */
 .prose p {
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4 {
   color: var(--accent-color);
   font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
+/* Minimalist Link Hover State */
 .prose a {
   color: var(--foreground);
   text-decoration: underline;
+  text-decoration-color: #333;
   text-underline-offset: 4px;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 .prose a:hover {
   color: var(--link-hover);
+  text-decoration-color: #fff;
+}
+
+/* Premium Fade-Up Micro-Animation */
+@keyframes fade-up {
+  0% { 
+    opacity: 0; 
+    transform: translateY(12px); 
+    filter: blur(2px);
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+    filter: blur(0);
+  }
+}
+
+.fade-in {
+  animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

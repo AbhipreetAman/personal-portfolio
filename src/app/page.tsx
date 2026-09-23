@@ -57,6 +57,26 @@ export default function Home() {
         </div>
       </header>
 
+      <section className="mb-12 bg-[#1a1a1a] p-6 rounded-2xl">
+        <h2 className="text-sm font-semibold text-white uppercase tracking-wider mb-2 m-0">Currently</h2>
+        <p className="text-[#a1a1aa] text-sm m-0">
+          Software Engineer at <strong className="text-white font-medium">Boeing</strong>. Architecting enterprise-grade solutions and studying AI-powered workflows.
+        </p>
+      </section>
+
+      <section className="mb-12">
+        <blockquote className="border-l-2 border-[#555] pl-4 italic text-[#a1a1aa] m-0">
+          "I follow a simple philosophy: question assumptions, learn the fundamentals, build relentlessly, and keep exploring. I'm not trying to fit into one box. I'm trying to become exceptionally good at figuring things out."
+        </blockquote>
+      </section>
+
+      <section className="mb-14">
+        <h2 className="text-lg font-semibold mb-4 text-white">Core Focus</h2>
+        <p className="text-[#a1a1aa] leading-relaxed">
+          System Architecture, Product Management, AI Integration, and First-Principles Problem Solving.
+        </p>
+      </section>
+
       <section className="mb-12">
         <h2 className="text-lg font-semibold mb-5 text-white">Selected Work</h2>
         <ul className="space-y-5 m-0">
