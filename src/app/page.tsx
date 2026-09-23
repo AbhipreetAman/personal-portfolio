@@ -1,17 +1,18 @@
 import Link from "next/link";
-import { FaEnvelope, FaLinkedin, FaXTwitter, FaYoutube, FaThreads, FaInstagram, FaFacebook, FaMedium } from "react-icons/fa6";
+import { FaEnvelope, FaLinkedin, FaXTwitter, FaYoutube, FaThreads, FaInstagram, FaFacebook, FaMedium, FaReddit } from "react-icons/fa6";
+import NextStep from "@/components/NextStep";
 
 export default function Home() {
   return (
     <div className="prose fade-in">
-      <header className="mb-8">
+      <header className="mb-12">
         <h1 className="text-2xl font-semibold mb-1">Abhipreet Aman</h1>
-        <p className="text-[#a1a1aa] mb-4">Software Engineer who builds enterprise-grade solutions.</p>
-        <p className="text-[#a1a1aa] mb-4">
+        <p className="text-[#a1a1aa] mb-4">Software Engineer</p>
+        <p className="text-[#a1a1aa] mb-6 leading-relaxed">
           I enjoy solving complex technical problems with modern engineering practices. 
-          Currently studying AI-powered workflows to enhance productivity and software quality.
+          Currently architecting enterprise-grade solutions at Boeing and studying AI-powered workflows.
         </p>
-        <div className="flex flex-wrap gap-5 mt-6">
+        <div className="flex flex-wrap gap-5">
           <a href="mailto:abhipreetaman@gmail.com" aria-label="Email" className="text-[#a1a1aa] hover:text-white transition-colors">
             <FaEnvelope size={20} />
           </a>
@@ -36,48 +37,43 @@ export default function Home() {
           <a href="https://medium.com/@abhipreetaman" target="_blank" rel="noopener noreferrer" aria-label="Medium" className="text-[#a1a1aa] hover:text-white transition-colors">
             <FaMedium size={20} />
           </a>
+          <a href="https://www.reddit.com/user/Zestyclose_Way_4022/" target="_blank" rel="noopener noreferrer" aria-label="Reddit" className="text-[#a1a1aa] hover:text-white transition-colors">
+            <FaReddit size={20} />
+          </a>
         </div>
       </header>
 
-      <section className="mb-10">
-        <p>
-          I&apos;m a Software Engineer at Boeing, driven by a love for problem-solving and the power of technology to create a better future. 
-          With a background in Computer Science and Engineering, I find joy in turning complex challenges into elegant solutions.
-        </p>
-        <p>
-          Beyond code, I&apos;m passionate about sports, where discipline and teamwork shape my approach to life and work. I believe in constant learning, innovation, and using technology to make life simpler, smarter, and more beautiful.
-        </p>
-      </section>
-
-      <section className="mb-10">
-        <h2 className="text-lg font-semibold mb-4 text-white">Selected Projects</h2>
-        <ul className="space-y-4">
+      <section className="mb-12">
+        <h2 className="text-lg font-semibold mb-5 text-white">Selected Work</h2>
+        <ul className="space-y-5 m-0">
           <li>
-            <Link href="/projects" className="font-medium text-white hover:text-blue-500 transition-colors">OSCode AI</Link>
-            <p className="text-[#a1a1aa] text-sm mt-1">Strategic initiatives and team management to enhance organizational efficiency.</p>
+            <Link href="/projects" className="font-medium text-white hover:text-blue-500 transition-colors">
+              Personal Finance Tracker
+            </Link>
+            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">Full-stack web application built with Spring Boot, Angular, and SQL for efficient financial management.</p>
           </li>
           <li>
-            <Link href="/projects" className="font-medium text-white hover:text-blue-500 transition-colors">Responsive Web Solutions</Link>
-            <p className="text-[#a1a1aa] text-sm mt-1">Developed responsive and user-friendly websites using HTML5, CSS, and JavaScript.</p>
+            <a href="https://github.com/AbhipreetAman/covid_project" target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:text-blue-500 transition-colors">
+              Patient Monitoring System
+            </a>
+            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">Efficiently track and manage patient data built using C/C++ and Data Structures.</p>
           </li>
         </ul>
       </section>
 
-      <section className="mb-10">
-        <h2 className="text-lg font-semibold mb-4 text-white">Latest Writing</h2>
-        <ul className="space-y-4">
-          <li>
-            <Link href="/writing" className="font-medium text-white hover:text-blue-500 transition-colors">Extraction of Water Bodies from Remote Sensing Data</Link>
-            <p className="text-[#a1a1aa] text-sm mt-1">Machine Learning approach to processing remote sensing data.</p>
-          </li>
-        </ul>
-      </section>
-      
       <section>
-        <p className="text-[#a1a1aa]">
-          Now: Architecting and delivering enterprise-grade software solutions at <Link href="/work" className="text-white underline hover:text-blue-500 transition-colors">Boeing</Link>.
-        </p>
+        <h2 className="text-lg font-semibold mb-5 text-white">Research & Publications</h2>
+        <ul className="space-y-5 m-0">
+          <li>
+            <Link href="/writing" className="font-medium text-white hover:text-blue-500 transition-colors">
+              Extraction of Water Bodies from Remote Sensing Data using Machine Learning
+            </Link>
+            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">Published in IJCRT. Leveraging advanced AI and UNet models for precise water body segmentation.</p>
+          </li>
+        </ul>
       </section>
+
+      <NextStep href="/work" label="Work Experience" />
     </div>
   );
 }
