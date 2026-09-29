@@ -1,4 +1,4 @@
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import NextStep from "@/components/NextStep";
 import { projects } from "@/data/projects";
 
@@ -16,15 +16,30 @@ export default function Projects() {
           <div key={i} className="group flex flex-col md:flex-row md:justify-between md:items-start gap-4">
             <div className="max-w-xl">
               <div className="flex items-center gap-3 mb-2">
-                <h2 className="text-lg font-medium text-white m-0">
-                  {project.link ? (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors flex items-center gap-2 no-underline">
+                <h2 className="text-lg font-medium text-white m-0 flex items-center gap-3">
+                  {project.liveLink ? (
+                    <a href={project.liveLink} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors no-underline">
                       {project.name}
-                      <FaGithub size={16} className="text-[#a1a1aa] group-hover:text-blue-400 transition-colors" />
+                    </a>
+                  ) : project.link ? (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors no-underline">
+                      {project.name}
                     </a>
                   ) : (
                     project.name
                   )}
+                  <div className="flex items-center gap-2">
+                    {(project as any).liveLink && (
+                      <a href={(project as any).liveLink} target="_blank" rel="noopener noreferrer" title="View Live Site">
+                        <FaArrowUpRightFromSquare size={14} className="text-[#a1a1aa] hover:text-blue-400 transition-colors" />
+                      </a>
+                    )}
+                    {project.link && (
+                      <a href={project.link} target="_blank" rel="noopener noreferrer" title="View Source">
+                        <FaGithub size={16} className="text-[#a1a1aa] hover:text-blue-400 transition-colors" />
+                      </a>
+                    )}
+                  </div>
                 </h2>
               </div>
               <p className="text-[#a1a1aa] text-sm leading-relaxed m-0 mb-3">

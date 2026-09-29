@@ -4,7 +4,8 @@ export const projects = [
     description: "A responsive financial calculator application designed to help users seamlessly calculate investments, plan loans, and manage financial goals with an intuitive interface.",
     date: "Aug 2026 - Sep 2026",
     tags: ["HTML5", "CSS", "JavaScript", "Web Development"],
-    link: "https://github.com/AbhipreetAman/Financial-Calculator"
+    link: "https://github.com/AbhipreetAman/Financial-Calculator",
+    liveLink: "https://smartwealthcalc.onrender.com"
   },
   {
     name: "Expense Tracker",
