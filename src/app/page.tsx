@@ -86,15 +86,15 @@ export default function Home() {
         <ul className="space-y-5 m-0">
           <li>
             <Link href="/projects" className="font-medium text-white hover:text-blue-500 transition-colors">
-              Personal Finance Tracker
+              Finance Tracker Website
             </Link>
-            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">Full-stack web application built with Spring Boot, Angular, and SQL for efficient financial management.</p>
+            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">A minimal, user-centric expense tracker demonstrating production-grade engineering: clean architecture, REST APIs, security, database discipline, and automated testing.</p>
           </li>
           <li>
-            <a href="https://github.com/AbhipreetAman/covid_project" target="_blank" rel="noopener noreferrer" className="font-medium text-white hover:text-blue-500 transition-colors">
-              Patient Monitoring System
-            </a>
-            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">Efficiently track and manage patient data built using C/C++ and Data Structures.</p>
+            <Link href="/projects" className="font-medium text-white hover:text-blue-500 transition-colors">
+              Water Body Segmentation Project
+            </Link>
+            <p className="text-[#a1a1aa] text-sm mt-1.5 leading-relaxed">Leveraging advanced AI and the UNet model for precise and efficient water body segmentation from satellite imagery to enhance environmental monitoring.</p>
           </li>
         </ul>
       </section>
