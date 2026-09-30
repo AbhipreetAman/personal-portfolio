@@ -30,10 +30,6 @@ export default function Home() {
             Currently architecting enterprise-grade solutions at Boeing and studying AI-powered workflows.
           </p>
           <div className="flex flex-wrap items-center gap-5">
-            <a href="https://drive.google.com/file/d/1TaTx4kpxG-lrpqhgdnuZ4OyBWw7bJ9Gj/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="text-white text-sm font-medium hover:text-gray-300 transition-colors flex items-center gap-1.5 no-underline">
-              Resume <FaArrowUpRightFromSquare size={10} className="text-[#a1a1aa]" />
-            </a>
-            <span className="text-[#333] text-sm">|</span>
             <a href="mailto:abhipreetaman@gmail.com" aria-label="Email" className="text-[#a1a1aa] hover:text-white transition-colors">
               <FaEnvelope size={18} />
             </a>
