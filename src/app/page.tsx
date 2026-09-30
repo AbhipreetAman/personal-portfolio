@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaEnvelope, FaLinkedin, FaXTwitter, FaYoutube, FaThreads, FaInstagram, FaFacebook, FaMedium, FaReddit } from "react-icons/fa6";
+import { FaEnvelope, FaLinkedin, FaXTwitter, FaYoutube, FaThreads, FaInstagram, FaFacebook, FaMedium, FaReddit, FaArrowUpRightFromSquare } from "react-icons/fa6";
 import NextStep from "@/components/NextStep";
 
 export default function Home() {
@@ -16,9 +16,9 @@ export default function Home() {
             <Image 
               src="/profile.jpg" 
               alt="Abhipreet Aman" 
-              width={100} 
-              height={100} 
-              className="rounded-2xl object-cover shadow-lg m-0 w-[80px] h-[80px] sm:w-[120px] sm:h-[120px]"
+              width={120} 
+              height={160} 
+              className="rounded-2xl object-cover shadow-xl m-0 w-[90px] h-[120px] sm:w-[120px] sm:h-[160px] ring-1 ring-white/10 hover:ring-white/20 hover:scale-105 hover:shadow-white/5 transition-all duration-500"
               priority
             />
           </div>
@@ -29,9 +29,13 @@ export default function Home() {
             I enjoy solving complex technical problems with modern engineering practices. 
             Currently architecting enterprise-grade solutions at Boeing and studying AI-powered workflows.
           </p>
-          <div className="flex flex-wrap gap-5">
+          <div className="flex flex-wrap items-center gap-5">
+            <a href="https://drive.google.com/file/d/1TaTx4kpxG-lrpqhgdnuZ4OyBWw7bJ9Gj/view?usp=drive_link" target="_blank" rel="noopener noreferrer" className="text-white text-sm font-medium hover:text-gray-300 transition-colors flex items-center gap-1.5 no-underline">
+              Resume <FaArrowUpRightFromSquare size={10} className="text-[#a1a1aa]" />
+            </a>
+            <span className="text-[#333] text-sm">|</span>
             <a href="mailto:abhipreetaman@gmail.com" aria-label="Email" className="text-[#a1a1aa] hover:text-white transition-colors">
-              <FaEnvelope size={20} />
+              <FaEnvelope size={18} />
             </a>
             <a href="https://www.linkedin.com/in/abhi-aman" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="text-[#a1a1aa] hover:text-white transition-colors">
               <FaLinkedin size={20} />
