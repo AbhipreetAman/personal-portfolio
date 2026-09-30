@@ -69,3 +69,33 @@ body {
 .fade-in {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Reusable Timeline Components (Separation of Concerns) */
+@utility timeline {
+  @apply space-y-12 border-l border-[#333] ml-3 mt-8 relative;
+}
+
+@utility timeline-item {
+  @apply relative pl-8;
+}
+
+@utility timeline-dot {
+  @apply absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-[#555] transition-colors ring-4 ring-[#111];
+}
+
+@utility timeline-dash {
+  @apply h-px w-4 bg-[#444] inline-block;
+}
+
+@utility timeline-bullet {
+  @apply relative before:content-[''] before:absolute before:left-[-16px] before:top-[8px] before:w-1.5 before:h-1.5 before:bg-[#333] before:rounded-full before:transition-colors leading-relaxed;
+}
+
+/* Native CSS Hover States for interactive timeline dots */
+.timeline-item:hover .timeline-dot {
+  @apply bg-white;
+}
+
+.timeline-item:hover .timeline-bullet::before {
+  @apply bg-[#555];
+}

@@ -11,9 +11,12 @@ export default function Writing() {
         Academic publications, technical deep dives, and thoughts on AI and systems design.
       </p>
       
-      <div className="space-y-10">
+      <div className="timeline">
         {publications.map((pub, i) => (
-          <div key={i} className="group flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+          <div key={i} className="timeline-item flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+            {/* Timeline Dot */}
+            <span className="timeline-dot" />
+            
             <div className="max-w-xl">
               <h2 className="text-lg font-medium text-white m-0 mb-1.5">
                 {pub.link ? (

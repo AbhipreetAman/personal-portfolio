@@ -1,4 +1,13 @@
-export const projects = [
+export interface Project {
+  name: string;
+  description: string;
+  date: string;
+  tags: string[];
+  link?: string;
+  liveLink?: string;
+}
+
+export const projects: Project[] = [
   {
     name: "Finance Calculator Website",
     description: "A responsive financial calculator application designed to help users seamlessly calculate investments, plan loans, and manage financial goals with an intuitive interface.",

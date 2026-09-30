@@ -9,26 +9,34 @@ export default function Work() {
         A career narrative focusing on impact, measurable outcomes, and lessons learned.
       </p>
       
-      <div className="space-y-8">
+      <div className="timeline">
         {workExperience.map((job, i) => (
-          <div key={i}>
-            <div className="flex justify-between items-baseline mb-4">
+          <div key={i} className="timeline-item">
+            {/* Timeline Dot */}
+            <span className="timeline-dot" />
+            
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-5">
               <h2 className="text-lg font-medium text-white m-0">{job.company}</h2>
-              <span className="text-sm text-[#a1a1aa]">{job.date}</span>
+              <span className="text-sm text-[#a1a1aa] mt-1 sm:mt-0 font-mono opacity-80">{job.date}</span>
             </div>
             
-            <div className="space-y-6">
+            <div className="space-y-8">
               {job.roles.map((role, j) => (
                 <div key={j}>
-                  <div className="flex justify-between items-baseline mb-1">
-                    <p className="text-white text-sm font-medium m-0">{role.title}</p>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-baseline mb-3">
+                    <p className="text-white text-sm font-medium m-0 flex items-center gap-3">
+                      <span className="timeline-dash"></span>
+                      {role.title}
+                    </p>
                     {role.date !== job.date && (
-                      <span className="text-xs text-[#a1a1aa]">{role.date}</span>
+                      <span className="text-xs text-[#777] mt-1 sm:mt-0 font-mono opacity-80">{role.date}</span>
                     )}
                   </div>
-                  <ul className="text-[#a1a1aa] text-sm space-y-2 list-disc pl-4 mt-2">
+                  <ul className="text-[#a1a1aa] text-sm space-y-3 list-none pl-7 mt-3 relative">
                     {role.description.map((desc, k) => (
-                      <li key={k}>{desc}</li>
+                      <li key={k} className="timeline-bullet">
+                        {desc}
+                      </li>
                     ))}
                   </ul>
                 </div>

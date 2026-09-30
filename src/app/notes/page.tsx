@@ -10,16 +10,18 @@ export default function Notes() {
         A few principles I try to follow.
       </p>
       
-      <div className="space-y-8">
+      <div className="timeline">
         {principles.map((p) => (
-          <div key={p.num} className="group flex gap-4 md:gap-6">
-            <span className="text-sm font-mono text-[#a1a1aa] opacity-50 group-hover:opacity-100 transition-opacity mt-1 shrink-0">
-              {p.num}
-            </span>
-            <div>
-              <h2 className="text-base font-medium text-white mb-1.5 transition-colors">{p.title}</h2>
-              <p className="text-[#a1a1aa] text-sm leading-relaxed m-0">{p.desc}</p>
+          <div key={p.num} className="timeline-item">
+            <span className="timeline-dot" />
+            
+            <div className="flex items-center gap-3 mb-2">
+              <span className="text-sm font-mono text-[#555] group-hover:text-white transition-colors shrink-0">
+                {p.num}
+              </span>
+              <h2 className="text-base font-medium text-white m-0">{p.title}</h2>
             </div>
+            <p className="text-[#a1a1aa] text-sm leading-relaxed m-0">{p.desc}</p>
           </div>
         ))}
       </div>

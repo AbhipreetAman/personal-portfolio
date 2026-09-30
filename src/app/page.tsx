@@ -74,7 +74,7 @@ export default function Home() {
 
       <section className="mb-12">
         <blockquote className="border-l-2 border-[#555] pl-4 italic text-[#a1a1aa] m-0">
-          "I follow a simple philosophy: question assumptions, learn the fundamentals, build relentlessly, and keep exploring. I'm not trying to fit into one box. I'm trying to become exceptionally good at figuring things out."
+          &quot;I follow a simple philosophy: question assumptions, learn the fundamentals, build relentlessly, and keep exploring. I&apos;m not trying to fit into one box. I&apos;m trying to become exceptionally good at figuring things out.&quot;
         </blockquote>
       </section>
 

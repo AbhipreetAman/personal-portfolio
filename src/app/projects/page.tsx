@@ -11,9 +11,12 @@ export default function Projects() {
         Proof of building. Selected software, experiments, and open-source utilities.
       </p>
 
-      <div className="space-y-10">
+      <div className="timeline">
         {projects.map((project, i) => (
-          <div key={i} className="group flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+          <div key={i} className="timeline-item flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+            {/* Timeline Dot */}
+            <span className="timeline-dot" />
+            
             <div className="max-w-xl">
               <div className="flex items-center gap-3 mb-2">
                 <h2 className="text-lg font-medium text-white m-0 flex items-center gap-3">
@@ -29,8 +32,8 @@ export default function Projects() {
                     project.name
                   )}
                   <div className="flex items-center gap-2">
-                    {(project as any).liveLink && (
-                      <a href={(project as any).liveLink} target="_blank" rel="noopener noreferrer" title="View Live Site">
+                    {project.liveLink && (
+                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer" title="View Live Site">
                         <FaArrowUpRightFromSquare size={14} className="text-[#a1a1aa] hover:text-blue-400 transition-colors" />
                       </a>
                     )}

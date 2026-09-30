@@ -11,16 +11,17 @@ export default function Services() {
         How I can help your business. Partnering with companies to build scalable, high-performance technical solutions.
       </p>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="timeline">
         {services.map((service, i) => (
-          <div key={i} className="p-6 bg-[#1a1a1a] rounded-2xl flex flex-col h-full">
+          <div key={i} className="timeline-item">
+            <span className="timeline-dot" />
             <h2 className="text-lg font-medium text-white mb-2 m-0">{service.title}</h2>
-            <p className="text-[#a1a1aa] text-sm leading-relaxed mb-4 grow m-0">
+            <p className="text-[#a1a1aa] text-sm leading-relaxed mb-4 m-0 max-w-2xl">
               {service.description}
             </p>
-            <div className="flex flex-wrap gap-2 mt-auto">
+            <div className="flex flex-wrap gap-2">
               {service.technologies.map((tech) => (
-                <span key={tech} className="text-xs px-2 py-1 rounded bg-[#222] text-[#a1a1aa] border border-[#333]">
+                <span key={tech} className="text-xs px-2.5 py-1 rounded-md bg-[#222] text-[#a1a1aa] border border-[#333]">
                   {tech}
                 </span>
               ))}
