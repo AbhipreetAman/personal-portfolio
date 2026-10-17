@@ -1,4 +1,6 @@
-export const services = [
+import { Service } from "@/types";
+
+export const services: Service[] = [
   {
     title: "Full-Stack Web Development",
     description: "End-to-end web applications built with modern frameworks like Next.js, Angular, and Spring Boot. Focus on high performance, responsive design, and scalable architecture.",

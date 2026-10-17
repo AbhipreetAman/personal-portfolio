@@ -1,4 +1,6 @@
-export const principles = [
+import { Principle } from "@/types";
+
+export const principles: Principle[] = [
   { num: '01', title: 'Start with the problem', desc: 'Understand what needs solving before thinking about how to build it.' },
   { num: '02', title: 'Think from first principles', desc: 'Question assumptions. Break things down. Rebuild from the fundamentals.' },
   { num: '03', title: 'Keep it simple', desc: 'Prefer fewer moving parts. Complexity should have a reason to exist.' },

@@ -1,28 +1,74 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ☀️ Light Mode: Warm Editorial */
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  --bg-app: #fafafa;
+  --bg-surface: #f4f4f5;
+  --bg-surface-hover: #ebecef;
+  --bg-surface-active: #e4e4e7;
+  --text-primary: #09090b;
+  --text-secondary: #52525b;
+  --text-muted: #71717a;
+  --border-subtle: #e4e4e7;
+  --border-strong: #d4d4d8;
+  --link-underline: #d4d4d8;
+  --link-hover: #09090b;
+  --selection-bg: #e4e4e7;
+  --selection-fg: #09090b;
+  --timeline-line: #e4e4e7;
+  --timeline-dot: #a1a1aa;
+  --timeline-dot-hover: #09090b;
+  --timeline-ring: #fafafa;
+}
+
+/* 🌙 Dark Mode: Obsidian Minimal */
+:root.dark,
+:root[data-theme='dark'],
+.dark {
+  --bg-app: #0a0a0a;
+  --bg-surface: #141416;
+  --bg-surface-hover: #1f1f23;
+  --bg-surface-active: #222222;
+  --text-primary: #ededed;
   --text-secondary: #a1a1aa;
-  --accent-color: #ffffff;
+  --text-muted: #71717a;
+  --border-subtle: #27272a;
+  --border-strong: #333333;
+  --link-underline: #333333;
   --link-hover: #ffffff;
+  --selection-bg: #333333;
+  --selection-fg: #ffffff;
+  --timeline-line: #27272a;
+  --timeline-dot: #52525b;
+  --timeline-dot-hover: #ffffff;
+  --timeline-ring: #0a0a0a;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg-app);
+  --color-foreground: var(--text-primary);
+  --color-surface: var(--bg-surface);
+  --color-surface-hover: var(--bg-surface-hover);
+  --color-surface-active: var(--bg-surface-active);
+  --color-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-border: var(--border-subtle);
+  --color-border-strong: var(--border-strong);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg-app);
+  color: var(--text-primary);
+  transition: background-color 0.2s ease, color 0.2s ease;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background-color: #333333;
-  color: #ffffff;
+  background-color: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 /* Premium Typography Spacing */
@@ -33,23 +79,23 @@ body {
 }
 
 .prose h1, .prose h2, .prose h3, .prose h4 {
-  color: var(--accent-color);
+  color: var(--text-primary);
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 /* Minimalist Link Hover State */
 .prose a {
-  color: var(--foreground);
+  color: var(--text-primary);
   text-decoration: underline;
-  text-decoration-color: #333;
+  text-decoration-color: var(--link-underline);
   text-underline-offset: 4px;
   transition: all 0.2s ease;
 }
 
 .prose a:hover {
   color: var(--link-hover);
-  text-decoration-color: #fff;
+  text-decoration-color: var(--link-hover);
 }
 
 /* Premium Fade-Up Micro-Animation */
@@ -70,32 +116,39 @@ body {
   animation: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Reusable Timeline Components (Separation of Concerns) */
-@utility timeline {
-  @apply space-y-12 border-l border-[#333] ml-3 mt-8 relative;
+/* Reusable Dynamic Timeline Utilities */
+.timeline {
+  @apply space-y-12 border-l ml-3 mt-8 relative;
+  border-color: var(--timeline-line);
 }
 
-@utility timeline-item {
+.timeline-item {
   @apply relative pl-8;
 }
 
-@utility timeline-dot {
-  @apply absolute -left-[5px] top-1.5 h-2 w-2 rounded-full bg-[#555] transition-colors ring-4 ring-[#111];
+.timeline-dot {
+  @apply absolute -left-[5px] top-1.5 h-2 w-2 rounded-full transition-colors ring-4;
+  background-color: var(--timeline-dot);
+  --tw-ring-color: var(--timeline-ring);
 }
 
-@utility timeline-dash {
-  @apply h-px w-4 bg-[#444] inline-block;
+.timeline-dash {
+  @apply h-px w-4 inline-block;
+  background-color: var(--border-subtle);
 }
 
-@utility timeline-bullet {
-  @apply relative before:content-[''] before:absolute before:left-[-16px] before:top-[8px] before:w-1.5 before:h-1.5 before:bg-[#333] before:rounded-full before:transition-colors leading-relaxed;
+.timeline-bullet {
+  @apply relative before:content-[''] before:absolute before:left-[-16px] before:top-[8px] before:w-1.5 before:h-1.5 before:rounded-full before:transition-colors leading-relaxed;
 }
 
-/* Native CSS Hover States for interactive timeline dots */
+.timeline-bullet::before {
+  background-color: var(--timeline-dot);
+}
+
 .timeline-item:hover .timeline-dot {
-  @apply bg-white;
+  background-color: var(--timeline-dot-hover);
 }
 
 .timeline-item:hover .timeline-bullet::before {
-  @apply bg-[#555];
+  background-color: var(--timeline-dot-hover);
 }

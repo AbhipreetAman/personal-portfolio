@@ -1,4 +1,6 @@
-export const certifications = [
+import { Certification } from "@/types";
+
+export const certifications: Certification[] = [
   {
     title: "ChatGPT Prompt Engineering for Developers",
     issuer: "DeepLearning.AI",

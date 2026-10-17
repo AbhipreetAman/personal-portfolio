@@ -1,4 +1,6 @@
-export const publications = [
+import { Publication } from "@/types";
+
+export const publications: Publication[] = [
   {
     title: "Extraction of Water Bodies from Remote Sensing Data using Machine Learning",
     description: "A machine learning approach leveraging the UNet model for precise water body segmentation from satellite imagery, aimed at enhancing environmental monitoring and conservation.",

@@ -1,33 +1,31 @@
-import NextStep from "@/components/NextStep";
+import { PageHeader, NextStep } from "@/components/ui";
+import { Timeline, TimelineItem } from "@/components/timeline";
 import { principles } from "@/data/notes";
 
 export default function Notes() {
-
   return (
     <div className="prose fade-in">
-      <h1 className="text-2xl font-semibold mb-6">Notes</h1>
-      <p className="text-[#a1a1aa] mb-12">
-        A few principles I try to follow.
-      </p>
+      <PageHeader 
+        title="Notes" 
+        description="A few principles I try to follow." 
+      />
       
-      <div className="timeline">
+      <Timeline>
         {principles.map((p) => (
-          <div key={p.num} className="timeline-item">
-            <span className="timeline-dot" />
-            
+          <TimelineItem key={p.num} className="group">
             <div className="flex items-center gap-3 mb-2">
-              <span className="text-sm font-mono text-[#555] group-hover:text-white transition-colors shrink-0">
+              <span className="text-sm font-mono text-muted group-hover:text-foreground transition-colors shrink-0">
                 {p.num}
               </span>
-              <h2 className="text-base font-medium text-white m-0">{p.title}</h2>
+              <h2 className="text-base font-medium text-foreground m-0">{p.title}</h2>
             </div>
-            <p className="text-[#a1a1aa] text-sm leading-relaxed m-0">{p.desc}</p>
-          </div>
+            <p className="text-secondary text-sm leading-relaxed m-0">{p.desc}</p>
+          </TimelineItem>
         ))}
-      </div>
+      </Timeline>
       
-      <div className="mt-16 pt-8 border-t border-[#333]">
-        <p className="text-[#a1a1aa] text-sm italic m-0">
+      <div className="mt-16 pt-8 border-t border-border">
+        <p className="text-secondary text-sm italic m-0">
           Still learning. Still changing these notes.
         </p>
       </div>
